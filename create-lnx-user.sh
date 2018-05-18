@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# useriam.sh by <ebo@>
+# create-lnx-user.sh by <ebo@>
 #
 # Run this script to create a local Linux user account driven by AWS IAM
 #
 # Usage:
-# ./useriam.sh <IAM name>
+# ./create-lnx-user <IAM name>
 #
 # Prerequisites:
 # 1) Valid AWS credentials
