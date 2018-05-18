@@ -85,10 +85,10 @@ create_user_with_pubkey() {
 	mkdir -p "${sshdir}" || \
 		errx "${FUNCNAME[0]}(): failed to mkdir '${sshdir}'"
 
-	useradd -m -U --home-dir "${homedir}" -G ribose-operators "${user}" || \
+	useradd -m -U --home-dir "${homedir}" "${user}" || \
 		errx "${FUNCNAME[0]}(): useradd '${user}' failed"
 
-	echo "${sshpublickey}" > "${sshdir}/authorized_keys"
+	echo "${sshpubkey}" > "${sshdir}/authorized_keys"
 	chmod -R 500 "${sshdir}"
 	chown -R "${user}":"${user}" "${homedir}"
 

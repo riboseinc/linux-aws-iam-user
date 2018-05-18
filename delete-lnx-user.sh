@@ -24,7 +24,7 @@ warn() {
 }
 
 usage() {
-	echo -e "${__progname} <username> [group]" >&2
+	echo -e "${__progname} <username>" >&2
 
 	exit 1
 }
@@ -39,7 +39,7 @@ delete_user() {
 	chage -E 0 "${user}"
 
 	# now kill all running processes of the to be deleted user
-	for pid in $(ps -o pid= -u ${user} 2>/dev/null); do
+	for pid in $(ps -o pid= -u "${user}" 2>/dev/null); do
 		warn "${FUNCNAME[0]}(): killing pid '${pid}' from '${user}'"
 		kill -9 "${pid}"
 	done
