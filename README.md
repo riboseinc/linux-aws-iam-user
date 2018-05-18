@@ -2,6 +2,7 @@
 A set of scripts to manage local user accounts and groups on Red Hat Enterprise Linux (including CentOS) driven by AWS IAM
 
 
+
 ## Includes:
 
 1. create-lnx-user.sh | to create a new local user based on an AWS IAM user + SSH public key
@@ -18,6 +19,7 @@ A set of scripts to manage local user accounts and groups on Red Hat Enterprise 
 - Delete script
 - Verbose option
 - Test and adapt to make it work on Amazon Linux
+- Integrate the multi-configuration parser concept from [Nereon](https://github.com/riboseinc/nereon) and (libnereon)[https://github.com/riboseinc/libnereon]
 
 
 ## Pull requests and patches
