@@ -18,17 +18,17 @@ readonly __progname="$(basename "$0")"
 readonly err_invalid_arg_function="invalid number of arguments for function"
 
 errx() {
-	echo -e "${__progname} $*" >&2
+	echo -e "${__progname}: $*" >&2
 
 	exit 1
 }
 
 warn() {
-	echo -e "${__progname} $*" >&2
+	echo -e "${__progname}: $*" >&2
 }
 
 usage() {
-	echo -e "${__progname} <username> [group]" >&2
+	echo -e "${__progname}: <username> [group]" >&2
 
 	exit 1
 }
